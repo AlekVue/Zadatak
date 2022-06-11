@@ -1,0 +1,46 @@
+<html>
+
+<p>Type password</p>
+<input type="text" id="password" />
+<input type="button" id="check" onclick="validatePassword()" value="Check password!"/>
+
+<script>
+
+function validatePassword() {
+    var p = document.getElementById('password').value.trim();
+    const errors = [];
+
+    var m = p.match(/[!“#\$%&‘\(\)=\*\?\+@\{\}\[\]:;]/g);
+    if (m==null)
+    errors.push("must have at least two special characters");
+                            
+    else if(m.length < 2)
+    errors.push("must have at least two special characters");
+    
+    if (p.length < 6) {
+        errors.push("must have at least 8 characters");
+    }
+    if (p.length > 24) {
+        errors.push("must have max 32 characters");
+    }
+    if (p.search(/[a-z]/) < 0) {
+        errors.push("must contain at least one lowercase letter"); 
+    }
+    if (p.search(/[A-Z]/) < 0) {
+        errors.push("must contain at least one uppercase letter"); 
+    }
+
+    if (p.search(/[0-9]/) < 0) {
+        errors.push("must contain at least one digit");
+    }
+ 
+    if (errors.length > 0) {
+        console.log(errors.join(" and "));
+        return false;
+    }
+    else console.log("Password is valid");
+    return true;
+}
+
+</script>
+</html>
