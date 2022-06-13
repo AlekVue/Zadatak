@@ -1,0 +1,100 @@
+$color1: #CDAD00;
+$color2: black;
+$color3: white;
+@mixin center-text {
+    text-align: center;
+  }
+$margin: 110px;
+
+body{
+    background-image: url("spices.png");
+    background-size: 450px 170px;
+    background-repeat: repeat-x;
+    margin-left: 5cm;
+    size: 400px;
+}
+#content{
+    width: 900px;
+    height: 600px;
+}
+.zacini {
+    background-color: $myColor;
+    width: 300px;
+    height: 400px;
+    padding: 15px 10px 15px 10px;
+    float: left;
+    margin-top: 200px;
+  }
+.div2{
+    display: table;
+    background-color: #8B7500;
+    @include center-text;
+    width: 510px;
+    height: 150px;
+    float: right;
+    padding: 30px;
+    margin-right: $margin;
+    margin-bottom: 100px;
+  }
+  #empty{
+      height: 133px;
+      width: 550px; 
+      margin-right: 70px;
+  }
+img{
+      float: right;
+      margin-top: 200px;
+      margin-right: $margin;
+  }
+h2{
+    color: $color3;
+    @include center-text;
+  }
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: justify;
+  }
+#skok{
+    @include center-text;
+  }
+#izvor{
+    font-family: Arial, Helvetica, sans-serif;
+    @include center-text;
+}
+#pp, table{
+    font-size: large;
+}
+#ul{
+    font-size: 16px;
+}
+table, td{
+    border: 1px solid $color2;
+}
+table{
+    @include center-text;
+    width: 500px;
+}
+#tabela{
+    display: table;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+#pp{
+    width: 500px;
+    display: contents;
+}
+a.one:link {color: $color1}
+a.one:visited {color: $color1;}
+a.one:hover {color:$color2;}
+a.skok:link {color:$color3}
+a.skok:visited {color: $color3;}
+a.skok:hover {color:$color2}
+
+ul.a {
+    list-style-type:square;
+  }
+ul.b {
+    list-style-type: circle;
+  }
+    
